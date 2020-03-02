@@ -7,6 +7,14 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
+.logo {
+  display: block;
+  width: 200px;
+  height: 52px;
+  background: url("../img/goldengate.jpg");
+  background-size: cover;
+}
+
 :root {
   --blue: #3490dc;
   --indigo: #6574cd;
