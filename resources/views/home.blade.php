@@ -26,10 +26,10 @@
         </div>
 			<table>
 				<div class="col-md-8 offset-md-4">
-					<a href="{{ route('student') }}"><button type="submit" class="btn btn-primary">
+					<a href="{{ route('student.index') }}"><button type="submit" class="btn btn-primary">
 						{{ __('Estudiantes') }}
 					</button></a>
-					<a href="{{ route('student') }}"><button type="submit" class="btn btn-primary">
+					<a href="{{ route('student.create') }}"><button type="submit" class="btn btn-primary">
 						{{ __('Profesores') }}
 					</button></a>
 					<button type="submit" class="btn btn-primary">

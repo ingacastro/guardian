@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Student;
 
 class StudentController extends Controller
 {
@@ -14,6 +15,7 @@ class StudentController extends Controller
     public function index()
     {
         //
+
 		return view('studentList');
 		 
     }
@@ -38,6 +40,16 @@ class StudentController extends Controller
     public function store(Request $request)
     {
         //
+		$student = new Student;
+		$student->document = $request->input("document");
+        $student->lastname = $request->input("lastname");
+        $student->firstname = $request->input("firstname");
+        $student->email = $request->input("email");
+        $student->homephone = $request->input("homephone");
+        $student->mobilephone = $request->input("mobilephone");
+        $student->save();
+        $students = Student::all();
+        return view("studentList");
     }
 
     /**
