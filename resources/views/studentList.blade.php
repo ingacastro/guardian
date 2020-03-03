@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
 	<div class="row justify-content-center">
-	Lista de Estudiantes
+		
 		<table>
 			<tr>
 				<td>Identification Document</td>
@@ -13,20 +13,31 @@
 				<td>Home Phone</td>
 				<td>Mobile Phone</td>
 			</tr>
-			{{--@foreach($students as $student)--}}
+			
+			@foreach($students as $student)
 			<tr>
-			{{--<td>{{$student->document}}</td>
+			<td>{{$student->document}}</td>
 				<td>{{$student->firstname}}</td>
 				<td>{{$student->lastname}}</td>
 				<td>{{$student->email}}</td>
 				<td>{{$student->homephone}}</td>
-			<td>{{$student->mobilephone}}</td>--}}
+			<td>{{$student->mobilephone}}</td>
 			</tr>
-			{{--@endforeach--}}
-		<table>	
+			@endforeach
+						<tr>
+				<td>
+					<a href="{{route('student.create')}}">
+					<button type="" class="btn btn-primary">Add Student</button>
+					</a>
+					<a href="{{route('home')}}">
+					<button type="" class="btn btn-primary">Menu</button>
+					</a>
+				</td>
+			</tr>
+		<table>
 	</div>
 	
 </div>
-	@include('studentCreate')
-	
+<div class="container">
+
 @endsection

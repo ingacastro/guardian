@@ -49,7 +49,7 @@ class StudentController extends Controller
         $student->mobilephone = $request->input("mobilephone");
         $student->save();
         $students = Student::all();
-        return view("studentList");
+        return view("studentList", ['students' => $students]);
     }
 
     /**

@@ -1,8 +1,9 @@
-{{--@extends('layouts.app')--}}
-	{{--@section('title', 'Create Student')--}}
-		{{--@section('content')--}}
+@extends('layouts.app')
+	@section('title', 'Create Student')
+		@section('content')
 <div class="container">
-	<form class="form-horizontal" action="student/store" method="post">
+	<form class="form-horizontal" action="{{ route('student.store') }}" method="post">
+
 	@csrf
 		<div class="row justify-content-center">
 		<table>
@@ -62,4 +63,4 @@
 		</div>
 	</form>
 </div>
-{{--@endsection--}}
+@endsection
