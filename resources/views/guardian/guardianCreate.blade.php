@@ -1,5 +1,5 @@
 @extends('layouts.app')
-	@section('title', 'Create Student')
+	@section('title', 'Create Guardian')
 		@section('content')
 <div class="container">
 	<form class="form-horizontal" action="{{ route('student.store') }}" method="post">
@@ -54,14 +54,37 @@
 				</td>
 			</tr>
 			<tr>
+				<td>Agregar Alumno(a)</td>
+			</tr>
+						<tr>
+
+				<td>
+					<select id="student" name="student" class="form-control">
+						<option>------Seleccionar------</option>
+						@foreach($students as $student)
+						<option value="{{ $student->document }}">{{ $student->document }}</option>
+						@endforeach
+					</select>
+				</td>
+			</tr>
+			<tr>
 				<td>
 					<button type="submit" class="btn btn-primary">Registrar</button>
 				</td>
 			</tr>
-
 		</table>
 		</div>
 		</div>
 	</form>
+</div>
+@endsection
+@section('scripts')
+<div id="vue-app">
+<script type="text/javascript">
+    $(document).ready(function () {
+        // inicializamos el plugin
+        $('#student').select2({  });
+    });
+</script>
 </div>
 @endsection

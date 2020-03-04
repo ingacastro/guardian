@@ -3,7 +3,6 @@
 @section('content')
 <div class="container">
 	<div class="row justify-content-center">
-		
 		<table>
 			<tr>
 				<td>Identification Document</td>
@@ -36,8 +35,7 @@
 			</tr>
 		<table>
 	</div>
-	
 </div>
-<div class="container">
+
 
 @endsection

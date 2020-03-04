@@ -10,7 +10,15 @@
     <title>{{-- config('app.name', 'Laravel') --}}@yield('title')</title>
 
     <!-- Scripts -->
+
+
+	<script src="http://demo.itsolutionstuff.com/plugin/jquery.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
+	
+	<script src="{{ asset('js/select2.min.js') }}"></script>
+
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -18,6 +26,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+	<link href="{{ asset('/css/select2.min.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -78,6 +87,8 @@
         <main class="py-4">
             @yield('content')
         </main>
+	
+	
     </div>
 </body>
 </html>

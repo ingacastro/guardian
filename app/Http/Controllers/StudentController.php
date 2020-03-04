@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Student;
+use DB;
 
 class StudentController extends Controller
 {
@@ -15,8 +16,9 @@ class StudentController extends Controller
     public function index()
     {
         //
-
-		return view('studentList');
+		$students = DB::table('student')->get();
+		return view('studentList', ['students' => $students]);
+		//return view('studentList');
 		 
     }
 

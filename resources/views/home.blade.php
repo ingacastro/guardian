@@ -20,23 +20,24 @@
 
             </div>
 			--}}
-			<div class="card">
-			MENÚ PRINCIPAL
-			</div>
+
         </div>
 			<table>
 				<div class="col-md-8 offset-md-4">
+					MENÚ PRINCIPAL
+				</div>
+				<div class="col-md-8 offset-md-4">
 					<a href="{{ route('student.index') }}"><button type="submit" class="btn btn-primary">
-						{{ __('Estudiantes') }}
+						{{ __('Students') }}
 					</button></a>
-					<a href="{{ route('student.create') }}"><button type="submit" class="btn btn-primary">
-						{{ __('Profesores') }}
+					<a href="{{ route('guardian.index') }}"><button type="submit" class="btn btn-primary">
+						{{ __('Guardians') }}
 					</button></a>
 					<button type="submit" class="btn btn-primary">
-						{{ __('Cursos') }}
+						{{ __('Courses') }}
 					</button>
 					<button type="submit" class="btn btn-primary">
-						{{ __('Empleados') }}
+						{{ __('Employees') }}
 					</button>
 				</div>
 				</table><Br>
